@@ -14,7 +14,7 @@ body {
 
 header {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 header img {
@@ -44,6 +44,7 @@ header img {
 
 .main_form form {
     margin: 0 10%;
+    position: relative;
 }
 
 #sub-mail {
@@ -73,6 +74,31 @@ header img {
     color: white;
     font-weight: 600;
     box-shadow: 0px 5px 10px 0px rgba(79, 125, 243, 0.3);
+    cursor: pointer;
+}
+
+#sub-btn:hover {
+    background-color: var(--color-scnd-pale-blue);
+}
+
+.main_form form .error-txt {
+    display: none;
+    color: var(--color-scnd-red);
+    font-style: italic;
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.main_form form.error .error-txt {
+    display: block;
+}
+
+.main_form form.error #sub-mail {
+    border: 1px solid var(--color-scnd-red);
+    margin-bottom: 15%;
 }
 
 .main-image {
@@ -90,10 +116,19 @@ footer {
     text-align: center;
 }
 
-footer img {
+footer a {
+    text-decoration: none;
+}
+
+footer svg {
     border: 1px solid #c2d3ff;
     padding: 7px;
     border-radius: 50%;
+}
+
+footer svg:hover {
+    background-color: var(--color-prmry-blue);
+    color: #fff;
 }
 
 footer a:nth-child(2) {
@@ -107,10 +142,6 @@ footer p {
     margin-top: 7.5%;
     margin-bottom: 7.5%;
 }
-
-
-
-
 
 @media only screen and (min-width: 850px) {
     header {
@@ -156,6 +187,20 @@ footer p {
         align-items: center;
         justify-content: center;
         border-radius: 50px;
+    }
+
+    .main_form form .error-txt {
+        left: 5%;
+        top: 90%;
+    }
+    
+    .main_form form.error .error-txt {
+        display: block;
+    }
+    
+    .main_form form.error #sub-mail {
+        border: 1px solid var(--color-scnd-red);
+        margin-bottom: 0;
     }
 
     .main-image {
